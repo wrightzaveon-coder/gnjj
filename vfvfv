@@ -108,7 +108,7 @@ if not Mobile then
 -- Library init
     local themes = {
         preset = {
-            accent = rgb(255, 0, 0),
+            accent = rgb(80, 200, 120),
         }, 
 
         utility = {
@@ -4095,7 +4095,7 @@ if not Mobile then
 
     local themes = {
         preset = {
-            accent = rgb(255, 0, 0),
+            accent = rgb(80, 200, 120),
         }, 
 
         utility = {
