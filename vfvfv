@@ -1,3 +1,47 @@
+-- Self-contained bootstrap for the Scorpio UI library
+local Services = {}
+
+for _, serviceName in ipairs({
+    "UserInputService",
+    "Players",
+    "Workspace",
+    "ReplicatedStorage",
+    "HttpService",
+    "GuiService",
+    "Lighting",
+    "RunService",
+    "Stats",
+    "CoreGui",
+    "Debris",
+    "TweenService",
+    "SoundService"
+}) do
+    Services[serviceName] = game:GetService(serviceName)
+end
+
+local RunService = Services.RunService
+local Mobile = false
+
+local function identity(fn)
+    return fn
+end
+
+local LPH_NO_VIRTUALIZE = identity
+local LPH_JIT_MAX = identity
+
+local library = {
+    directory = "Scorpio.Hub",
+    folders = {"/fonts", "/configs", "/assets"},
+    priority = {},
+    whitelist = {},
+    flags = {},
+    config_flags = {},
+    connections = {},
+    notifications = {notifs = {}},
+    current_open = nil,
+    cache = nil
+}
+
 if not Mobile then
 --LPH_JIT_MAX(function()
     local uis = Services.UserInputService
@@ -522,6 +566,15 @@ if not Mobile then
                 ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
                 IgnoreGuiInset = true;
             }); 
+
+
+            library.cache = library:create("Frame", {
+                Parent = library["items"];
+                Name = "LibraryCache";
+                Visible = false;
+                BackgroundTransparency = 1;
+                Size = dim2(0, 0, 0, 0);
+            });
 
             -- IF SHIT HAPPEN REMVOE ZINDEX
 
@@ -7787,3 +7840,5 @@ if not Mobile then
     --end)()
 
     end
+
+return library
