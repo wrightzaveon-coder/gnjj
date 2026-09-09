@@ -8,6 +8,7 @@ local window = library:window({
     suffix = "",
     -- Upload your image to Roblox as an image/decal, then replace this ID.
     icon = "rbxassetid://YOUR_IMAGE_ID",
+    iconSize = UDim2.fromOffset(44, 44),
     gameInfo = "Universal",
     size = UDim2.fromOffset(700, 565)
 })
