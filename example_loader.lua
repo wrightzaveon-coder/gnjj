@@ -4,8 +4,10 @@ local chunk = assert(loadstring(game:HttpGet(URL)))
 local library = assert(chunk())
 
 local window = library:window({
-    name = "My Hub",
+    name = "",
     suffix = "",
+    -- Upload your image to Roblox as an image/decal, then replace this ID.
+    icon = "rbxassetid://YOUR_IMAGE_ID",
     gameInfo = "Universal",
     size = UDim2.fromOffset(700, 565)
 })
