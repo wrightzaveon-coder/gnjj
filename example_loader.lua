@@ -9,7 +9,10 @@ local window = library:window({
     -- Upload your image to Roblox as an image/decal, then replace this ID.
     icon = "rbxassetid://YOUR_IMAGE_ID",
     iconSize = UDim2.fromOffset(44, 44),
-    gameInfo = "Universal",
+    gameInfo = "",
+    -- Upload the Philly Streetz 2 image to Roblox and replace this ID.
+    gameInfoImage = "rbxassetid://YOUR_GAME_IMAGE_ID",
+    gameInfoImageSize = UDim2.fromOffset(140, 24),
     size = UDim2.fromOffset(700, 565)
 })
 
