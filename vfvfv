@@ -20,7 +20,7 @@ for _, serviceName in ipairs({
 end
 
 local RunService = Services.RunService
-local Mobile = false
+local Mobile = Services.UserInputService.TouchEnabled and not Services.UserInputService.KeyboardEnabled
 
 local function identity(fn)
     return fn
