@@ -1,13 +1,3 @@
-
---[[
-
-    Milenium Library
-    -> Made by @finobe 
-    -> Kind of got bored idk what to do with life
-    -> Idk who or why this got leaked, ui was VERY popular and high in demand with customers
-]]
-
--- Variables 
 if not Mobile then
 --LPH_JIT_MAX(function()
     local uis = Services.UserInputService
@@ -7794,7 +7784,6 @@ if not Mobile then
                 items[ "notification" ]:Destroy() 
             end)
         end
-    --
--- 
+    --end)()
 
-return library
+    end
