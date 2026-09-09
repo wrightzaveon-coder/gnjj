@@ -545,6 +545,7 @@ if not Mobile then
                 name = properties.name or properties.Name or "nebula";
                 game_name = properties.gameInfo or properties.game_info or properties.GameInfo or "Milenium for Counter-Strike: Global Offensive";
                 icon = properties.icon or properties.Icon;
+                icon_size = properties.iconSize or properties.icon_size or dim2(0, 44, 0, 44);
                 size = properties.size or properties.Size or dim2(0, 700, 0, 565);
                 selected_tab;
                 items = {};
@@ -669,7 +670,7 @@ if not Mobile then
                         Name = "\0";
                         AnchorPoint = vec2(0.5, 0);
                         Position = dim2(0.5, 0, 0, 13);
-                        Size = dim2(0, 44, 0, 44);
+                        Size = cfg.icon_size;
                         BackgroundTransparency = 1;
                         BorderSizePixel = 0;
                         Image = cfg.icon;
@@ -4520,6 +4521,7 @@ if not Mobile then
                 name = properties.name or properties.Name or "nebula";
                 game_name = properties.gameInfo or properties.game_info or properties.GameInfo or "Milenium for Counter-Strike: Global Offensive";
                 icon = properties.icon or properties.Icon;
+                icon_size = properties.iconSize or properties.icon_size or dim2(0, 44, 0, 44);
                 size = properties.size or properties.Size or dim2(0, 700, 0, 565);
                 selected_tab;
                 items = {};
@@ -4638,7 +4640,7 @@ if not Mobile then
                         Name = "\0";
                         AnchorPoint = vec2(0.5, 0);
                         Position = dim2(0.5, 0, 0, 13);
-                        Size = dim2(0, 44, 0, 44);
+                        Size = cfg.icon_size;
                         BackgroundTransparency = 1;
                         BorderSizePixel = 0;
                         Image = cfg.icon;
