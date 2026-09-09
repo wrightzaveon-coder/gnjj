@@ -544,6 +544,7 @@ if not Mobile then
                 suffix = properties.suffix or properties.Suffix or "tech";
                 name = properties.name or properties.Name or "nebula";
                 game_name = properties.gameInfo or properties.game_info or properties.GameInfo or "Milenium for Counter-Strike: Global Offensive";
+                icon = properties.icon or properties.Icon;
                 size = properties.size or properties.Size or dim2(0, 700, 0, 565);
                 selected_tab;
                 items = {};
@@ -652,7 +653,7 @@ if not Mobile then
                     Text = name;
                     Parent = items[ "side_frame" ];
                     Name = "\0";
-                    Text = string.format('<u>%s</u><font color = "rgb(255, 255, 255)">%s</font>', cfg.name, cfg.suffix);
+                    Text = cfg.icon and "" or string.format('<u>%s</u><font color = "rgb(255, 255, 255)">%s</font>', cfg.name, cfg.suffix);
                     BackgroundTransparency = 1;
                     Size = dim2(1, 0, 0, 70);
                     TextColor3 = themes.preset.accent;
@@ -661,6 +662,20 @@ if not Mobile then
                     TextSize = 30;
                     BackgroundColor3 = rgb(255, 255, 255)
                 }); library:apply_theme(items[ "title" ], "accent", "TextColor3");
+
+                if cfg.icon then
+                    items[ "title_icon" ] = library:create( "ImageLabel" , {
+                        Parent = items[ "side_frame" ];
+                        Name = "\0";
+                        AnchorPoint = vec2(0.5, 0);
+                        Position = dim2(0.5, 0, 0, 13);
+                        Size = dim2(0, 44, 0, 44);
+                        BackgroundTransparency = 1;
+                        BorderSizePixel = 0;
+                        Image = cfg.icon;
+                        ImageColor3 = rgb(255, 255, 255);
+                    });
+                end
                 
                 items[ "multi_holder" ] = library:create( "Frame" , {
                     Parent = items[ "main" ];
@@ -4504,6 +4519,7 @@ if not Mobile then
                 suffix = properties.suffix or properties.Suffix or "tech";
                 name = properties.name or properties.Name or "nebula";
                 game_name = properties.gameInfo or properties.game_info or properties.GameInfo or "Milenium for Counter-Strike: Global Offensive";
+                icon = properties.icon or properties.Icon;
                 size = properties.size or properties.Size or dim2(0, 700, 0, 565);
                 selected_tab;
                 items = {};
@@ -4606,7 +4622,7 @@ if not Mobile then
                     Text = name;
                     Parent = items[ "side_frame" ];
                     Name = "\0";
-                    Text = string.format('<u>%s</u><font color = "rgb(255, 255, 255)">%s</font>', cfg.name, cfg.suffix);
+                    Text = cfg.icon and "" or string.format('<u>%s</u><font color = "rgb(255, 255, 255)">%s</font>', cfg.name, cfg.suffix);
                     BackgroundTransparency = 1;
                     Size = dim2(1, 0, 0, 70);
                     TextColor3 = themes.preset.accent;
@@ -4615,6 +4631,20 @@ if not Mobile then
                     TextSize = 30;
                     BackgroundColor3 = rgb(255, 255, 255)
                 }); library:apply_theme(items[ "title" ], "accent", "TextColor3");
+
+                if cfg.icon then
+                    items[ "title_icon" ] = library:create( "ImageLabel" , {
+                        Parent = items[ "side_frame" ];
+                        Name = "\0";
+                        AnchorPoint = vec2(0.5, 0);
+                        Position = dim2(0.5, 0, 0, 13);
+                        Size = dim2(0, 44, 0, 44);
+                        BackgroundTransparency = 1;
+                        BorderSizePixel = 0;
+                        Image = cfg.icon;
+                        ImageColor3 = rgb(255, 255, 255);
+                    });
+                end
                 
                 items[ "multi_holder" ] = library:create( "Frame" , {
                     Parent = items[ "main" ];
